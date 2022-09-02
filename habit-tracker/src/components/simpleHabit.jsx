@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react'
+import React, { useState, useRef, useCallback, useEffect } from 'react'
 const SimpleHabit = (props) => {
     const [count, setCount] = useState(0);
     const spanRef = useRef();
@@ -6,6 +6,10 @@ const SimpleHabit = (props) => {
     const handleIncrement = useCallback(() => {
         setCount(count + 1);
     });
+
+    useEffect(() => {
+        console.log(`mounted & updated! : ${count}`);
+    }, [])
   
     return (
       <li className='habit'>
