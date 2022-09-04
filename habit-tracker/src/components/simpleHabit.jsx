@@ -18,7 +18,7 @@ const SimpleHabit = () => {
       </span>
       <span className="habit-count">{count}</span>
       <button className="habit-button habit-increase" onClick={handleIncrement}>
-        <i className="fas fa-plus-square"></i>
+        <i className="fas fa-plus-square">reading</i>
       </button>
     </li>
   );
